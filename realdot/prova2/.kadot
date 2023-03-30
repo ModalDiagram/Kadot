@@ -1,0 +1,25 @@
+{
+  "target": "/tmp",
+  "info": "no",
+  "ignore": [],
+  "versions": [
+    {
+      "name": "v2",
+      "inherites": "n",
+      "divergents": [],
+      "ignore": []
+    },
+    {
+      "name": "v3",
+      "inherites": "n",
+      "divergents": [],
+      "ignore": []
+    },
+    {
+      "name": "v4",
+      "inherites": "v2",
+      "divergents": [],
+      "ignore": []
+    }
+  ]
+}

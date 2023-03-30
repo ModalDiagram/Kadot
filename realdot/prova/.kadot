@@ -1,0 +1,19 @@
+{
+  "target": "/tmp",
+  "info": "no",
+  "ignore": [],
+  "versions": [
+    {
+      "name": "mia",
+      "inherits": "",
+      "divergents": [],
+      "ignore": []
+    },
+    {
+      "name": "tua",
+      "inherits": "",
+      "divergents": [],
+      "ignore": []
+    }
+  ]
+}
