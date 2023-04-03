@@ -1,0 +1,21 @@
+{
+  "target": "$HOME/.config/anything",
+  "info": "you can add anything here",
+  "ignore": [],
+  "versions": [
+    {
+      "name": "conf_1",
+      "target": "conf_2",
+      "inherits": "",
+      "divergents": [],
+      "ignore": []
+    },
+    {
+      "name": "conf_2",
+      "target": "$HOME/.config/another_target",
+      "inherits": "",
+      "divergents": [],
+      "ignore": []
+    }
+  ]
+}
