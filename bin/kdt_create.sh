@@ -2,12 +2,12 @@
 
 create(){
   KADOT_PATH=${BASH_SOURCE[0]%/*}/..
-  # shellcheck source=/home/sandro0198/projects/bashProjects/kadot/utils/bash_utils.sh
+  # shellcheck source=/home/sandro0198/projects/bashProjects/Kadot/utils/bash_utils.sh
   source "$KADOT_PATH/utils/bash_utils.sh"
 
   # Check that the directory has a Kadot configuration file
   if [[ ! -f ".kadot" ]]; then
-    echo "Kadot not found. Make sure to cd to the closest Kadot directory"
+    echo "Kadot not found. Make sure to cd to the closest Kadot directory or create a new branch here"
     exit 1
   fi
 
@@ -29,7 +29,7 @@ create(){
 
   # Ask if it inherites other versions, and check that they exist
   echo "Does it inherit other versions? [Y,n]"
-  if get_confirm; then
+  if get_confirm 0; then
     echo "Versions found: [${versions[*]}], \"q\" to quit "
 
     version_inherited=""
@@ -51,9 +51,11 @@ create(){
   fi
 
   # Ask if it has a different target than the branch
+  old_target=$(jq .target .kadot)
   target=""
+  echo "Parent's target directory: $old_target"
   echo "Do you want to set another target directory? [y,N]"
-  if get_confirm; then
+  if get_confirm 1; then
     echo "Choose the new target"
     read -r target;
   fi

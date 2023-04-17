@@ -10,7 +10,7 @@ branch(){
   if [[ -f "../.kadot" ]]; then
     echo "Found a parent Kadot directory"
     echo "Do you want to inherit its target and info? [Y/n]"
-    if get_confirm; then
+    if get_confirm 0; then
       IFS=$'\n' read -r -d '' target info < <(jq -r '.target, .info' "../.kadot")
     fi
   fi
